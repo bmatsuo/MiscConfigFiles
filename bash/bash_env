@@ -1,0 +1,16 @@
+
+# Add necessary Macports paths to variables.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/man:$MANPATH
+export PERL5LIB=/opt/local/lib/perl5:$PERL5LIB
+# LIBRARY_PATH is not necessary here for some reason?
+# CPLUS_INCLUDE_PATH is not necessary here for some reason?
+
+# Setup a user local install space at ~/local
+export LIBRARY_PATH=~local/lib:$LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=~/local/lib:$CPLUS_INCLUDE_PATH
+export PATH=~/local/bin:~/local/sbin:$PATH
+export MANPATH=~/local/man:$MANPATH
+export PERL5LIB=~/local/lib/perl5:~/local/lib/perl5/site_perl:$PERL5LIB
+
+export EDITOR=/usr/bin/vim
