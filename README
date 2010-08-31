@@ -1,0 +1,26 @@
+SYNOPSIS
+
+Contained in here are configs for the following programs:
+* vim
+* bash
+
+INSTALLING
+
+Simply type
+    make install
+
+Or, to install configs for a single program, say vim, just type
+    make vim
+
+REVERTING
+
+If you don't like a newly installed configuration file, you can just revert 
+to your old configuration. Say you don't like the bash config,
+    make bash_revert
+
+If you really want to revert all the programs you can just type
+    make revert
+
+If a configuration did not exist for a program prior to it being installed,
+it will not be removed. This is an important note. In this case, you must 
+remove the configuration yourself.
