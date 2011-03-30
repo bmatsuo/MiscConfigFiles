@@ -25,7 +25,7 @@ vim: vim_check
 	${INSTALL} vimrc ~/.vimrc
 
 vim_revert:
-	if [ -e ~/.vimrc.old ]; then mv ~/.vimrc.old ~/.vimrc; fi
+	if [ -e ~/.vimrc~ ]; then mv ~/.vimrc~ ~/.vimrc; fi
 
 bash_check:
 	[ -e bashrc ]
@@ -41,11 +41,11 @@ bash: bash_check
 	${INSTALL} bash/* ~/.bash
 
 bash_revert:
-	if [ -e ~/.bashrc.old ]; then mv ~/.bashrc.old ~/.bashrc; fi
-	if [ -e ~/.bash/bash_alias.old ]; then mv ~/.bash/bash_alias.old ~/.bash/bash_alias; fi
-	if [ -e ~/.bash/bash_env.old ]; then mv ~/.bash/bash_env.old ~/.bash/bash_env; fi
-	if [ -e ~/.bash/bash_func.old ]; then mv ~/.bash/bash_func.old ~/.bash/bash_func; fi
-	if [ -e ~/.bash/bash_vars.old ]; then mv ~/.bash/bash_vars.old ~/.bash/bash_vars; fi
+	if [ -e ~/.bashrc~ ]; then mv ~/.bashrc~ ~/.bashrc; fi
+	if [ -e ~/.bash/bash_alias~ ]; then mv ~/.bash/bash_alias~ ~/.bash/bash_alias; fi
+	if [ -e ~/.bash/bash_env~ ]; then mv ~/.bash/bash_env~ ~/.bash/bash_env; fi
+	if [ -e ~/.bash/bash_func~ ]; then mv ~/.bash/bash_func~ ~/.bash/bash_func; fi
+	if [ -e ~/.bash/bash_vars~ ]; then mv ~/.bash/bash_vars~ ~/.bash/bash_vars; fi
 	@echo 
 	@echo If you were not previously using the directory ~/.bash/,
 	@echo then you should remove it with
