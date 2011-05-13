@@ -64,6 +64,20 @@
     let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -output-format=dvi "$*"'
     let g:Tex_CompileRule_ps = 'dvips $*.dvi'
     let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+    let g:Tex_IgnoredWarnings =
+                \'Underfull'."\n".
+                \'Overfull'."\n".
+                \'specifier changed to'."\n".
+                \'You have requested'."\n".
+                \'Missing number, treated as zero.'."\n".
+                \'There were undefined references'."\n".
+                \"LaTeX Warning: Reference `%s' on page %n undefined"."\n".
+                \'Citation %.%# undefined'
+    let g:Tex_IgnoreLevel = 8
+
+    if platform == "Linux"
+        let g:Tex_ViewRule_pdf = "xpdf 2>/dev/null"
+    endif
 
 " Mapping Keys.
     " Set the leader key to one convinient on dvorak.
