@@ -23,4 +23,5 @@ if [[ -d ~/local ]]; then
     export PATH="~/local/bin:~/local/sbin:"$PATH
     export MANPATH="~/local/man:"$MANPATH
     export PERL5LIB="~/local/lib/perl5:"$PERL5LIB
+    export PYTHONPATH="$HOME/local/lib/python2.6/site-packages:$HOME/local/lib/python2.6:$PYTHONPATH"
 fi
